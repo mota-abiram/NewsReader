@@ -1,0 +1,347 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu&family=Varela+Round&display=swap');
+
+  *{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+  }
+
+  :root
+  {
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+
+  }
+
+
+  body
+  {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+  }
+
+  p{
+    font-family: "Roboto",sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  ul
+  {
+    list-style: none;
+    color: black;
+    
+  }
+
+  .flex
+  {
+    display: flex;
+    align-items: center;
+  }
+
+  .container
+  {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  nav
+  {
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+ .main-nav
+ {
+    justify-content: space-between;
+    padding-block: 8px;
+ }
+
+  .company-logo img
+  {
+    width: 120px;
+
+   
+  }
+
+  .nav-links ul
+  {
+    gap: 16px;
+  }
+
+   .hover-link
+   {
+    cursor: pointer;
+   }
+    
+  .hover-link:hover
+  {
+    color: var(--secondary-text-color);
+  }
+
+  .hover-link:active
+  {
+    color: red;
+  }
+
+  .nav-item.active 
+  {
+    color: var(--accent-color);
+  }
+  
+  .search-bar
+ {
+    height: 32px;
+    gap: 8px;
+ }
+
+
+ .news-input
+ {
+    width: 300px;
+    height: 100%;
+    padding-inline: 12px;
+ }
+
+ .search-button
+{
+    background-color: var(--accent-color);
+    height: 32px;
+    border: none;
+    color: white;
+    cursor:pointer;
+    border-radius: 4px;  
+}
+
+.search-button:hover
+{
+    background-color: var(--accent-color-dark);
+    font-family: "Roboto",sans-serif;
+}
+
+main
+{
+    padding-block:20px;
+    margin-top:140px;
+}
+
+.cards-container 
+{
+    justify-content:space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items:start;
+}
+
+.card 
+{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.card:hover
+{
+    box-shadow:1px 1px 8px #d4ecff;
+    transform: translate(-2px);
+    background-color:#f9fdff;
+}
+
+.card-content
+{
+    padding: 12px;
+}
+
+
+.card-header img
+{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.news-source
+{
+     margin-block: 12px;
+}
+
+
+@media screen and (max-width: 780px) {
+    .company-logo img {
+        width: 80px;
+        margin-left: 20px; 
+        margin-right: 30px;
+    }
+
+
+    
+    .search-button {
+        width: 100px; 
+    }
+
+
+    .nav-links {
+        display: none; 
+        margin-right: 50px; 
+    }
+    
+
+    
+
+    .search-bar {
+        flex: 1;
+        
+    }
+
+    .news-input {
+        width: 60%;
+    }
+
+    .card {
+        width: 100%; 
+        
+    }
+
+    .card-header img {
+        height: 150px; 
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .company-logo img {
+        width: 100px;
+        margin-left: 40px; 
+    }
+
+    .search-bar {
+        flex: 1;
+        text-align: center;
+        
+    }
+    
+    
+    .nav-links {
+        margin-right: 50px; 
+    }
+
+    .news-input {
+        width: 40%;
+    }
+
+    .search-button {
+        width: auto; 
+    }
+
+    
+    .card {
+        width: 48%; 
+    }
+
+    .card-header img {
+        height: 180px; 
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .company-logo img {
+        width: 120px;
+        margin-left: 50px;
+       
+    }
+
+    .search-button {
+        width: auto; 
+    }
+    
+    .nav-links {
+        margin-right: 50px; 
+    } 
+
+    .search-bar {
+        margin-top: 0; 
+    }
+
+    .news-input {
+        width: 300px;
+    }
+
+}
+
+@media(max-width:400px)
+{
+    
+    .news-input {
+        width:120px;
+        margin-right: 10px;
+    }
+
+    
+}
+
+@media(max-width:370px)
+{
+    
+    .news-input {
+        width:100px;
+        margin-right: 10px;
+    }
+  
+  
+}
+
+@media(max-width:300px)
+{
+    
+    .news-input 
+    {
+        width: 80px;
+        height: 20px;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+  
+    .company-logo img
+    {
+      width: 40px;
+    }
+    
+    #search-button
+    {
+        height: 20px;
+        width: 40px;
+        font-size: 7px;
+        margin-right: 50px;
+    }
+        
+}
+
+    
+
+
+
+
+
+
+
+
+
